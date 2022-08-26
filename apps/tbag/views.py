@@ -11,6 +11,6 @@ from datetime import date
 class Hook(APIView):
     def get(self,request):
         dat =date(2022,12,17)- date.today()
-        webhook = SyncWebhook.from_url("https://discord.com/api/webhooks/1012756464504422400/NWAbxPwpRF8uuHTpLFTm0UlK5vFQBWTc2zFNTrZAjPusieKlO8rE4qQPrAq0w9ksUm1e")
+        webhook = SyncWebhook.from_url("https://discordapp.com/api/webhooks/1012748651577217034/d08JuvqoKI_85AIm7faAfxHBwhuFFMCTIfdvX0rSP36fKsgFqjgo_wz4ebowQKmP5gyB")
         resp =webhook.send(f'Days to Bangalore Trip V4 : **{dat.days}**')
         return HttpResponse(resp)
