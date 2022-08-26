@@ -1,0 +1,6 @@
+django
+djangorestframework
+markdown
+requests
+discord
+python-dateutil

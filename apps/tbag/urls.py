@@ -1,5 +1,5 @@
 from django.urls import path
 from . import views
 urlpatterns=[
-        path('',views.Hook.as_view()),
+        path('blrtrip/',views.Hook.as_view()),
         ]
