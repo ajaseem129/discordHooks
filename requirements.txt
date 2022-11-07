@@ -4,3 +4,4 @@ markdown
 requests
 discord
 python-dateutil
+django-environ

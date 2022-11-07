@@ -7,10 +7,13 @@ from discord import SyncWebhook
 import datetime
 from dateutil import relativedelta
 from datetime import date
+from django.conf import settings
 # Create your views here.
+
+
 class Hook(APIView):
-    def get(self,request):
-        dat =date(2022,12,17)- date.today()
-        webhook = SyncWebhook.from_url("https://discord.com/api/webhooks/1012756464504422400/NWAbxPwpRF8uuHTpLFTm0UlK5vFQBWTc2zFNTrZAjPusieKlO8rE4qQPrAq0w9ksUm1e")
-        resp =webhook.send(f'Sleeps to Bangalore Trip V4 : **{dat.days}**')
+    def get(self, request):
+        dat = date(2022, 12, 17) - date.today()
+        webhook = SyncWebhook.from_url(settings.BLR_TRIP)
+        resp = webhook.send(f'Sleeps to Bangalore Trip V4 : **{dat.days}**')
         return HttpResponse(resp)
